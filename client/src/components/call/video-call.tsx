@@ -13,7 +13,7 @@ function VideoCall() {
                 from: {
                     id: userInfo?.id,
                     avatar: userInfo?.avatar,
-                    name: userInfo?.name,
+                    name: userInfo?.first_name,
                 },
                 callType: videoCall.callType,
                 roomId: videoCall.roomId,

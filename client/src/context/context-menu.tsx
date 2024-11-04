@@ -2,12 +2,6 @@ import { useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
 
 interface ContextMenuProps {
   options: any[];
@@ -22,7 +16,6 @@ interface ContextMenuProps {
 function ContextMenu({
   options,
   cordinates,
-  contextMenu,
   setContextMenu,
 }: ContextMenuProps) {
   const contextMenuRef = useRef(null);
@@ -72,26 +65,6 @@ function ContextMenu({
       })}
       <Separator className="bg-accent-foreground text-accent-foreground" />
     </div>
-      {/* <DropdownMenu onOpenChange={setContextMenu} open={contextMenu}>
-        <DropdownMenuContent
-          className="w-56 999999999"
-          style={{
-            // top: `calc(${cordinates.y}px - 100px)`,
-            // left: `calc(${cordinates.x}px + 100px)`,
-          }}
-        >
-          <DropdownMenuSeparator />
-          {options.map(({ name, callback }, index) => (
-            <DropdownMenuItem
-              key={index}
-              onClick={(e) => handleClick(e, callback)}
-            >
-              {name}
-            </DropdownMenuItem>
-          ))}
-          <DropdownMenuSeparator />
-        </DropdownMenuContent>
-      </DropdownMenu> */}
     </>
   );
 }
